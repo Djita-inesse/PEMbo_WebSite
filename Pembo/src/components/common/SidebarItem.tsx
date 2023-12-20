@@ -25,7 +25,7 @@ const SidebarItem = ({ item }: Props) => {
           marginTop:"1.3%",
           "&: hover": {
           
-            backgroundColor: colorConfigs.sidebar.hoverBg
+            backgroundColor: colorConfigs.sidebar.hoverBg,
           },
           backgroundColor: appState === item.state ? colorConfigs.sidebar.activeBg : "unset",
           paddingY: "12px",
