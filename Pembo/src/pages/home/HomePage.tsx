@@ -1,4 +1,4 @@
-import { BottomNavigation, BottomNavigationAction, Box, Button, CssBaseline, Grid, List, ListItem, ListItemText, Paper, styled } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Box, Button, CssBaseline, Grid, List, ListItem, ListItemText, Paper, Tab, Tabs, styled } from "@mui/material";
 import React from "react";
 import iconly from "../../assets/images/iconly.svg";
 import iconly2 from "../../assets/images/iconly-glass-info.svg";
@@ -33,6 +33,9 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const HomePage = (props: Props) => {
 
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
   const [value, setValue] = React.useState(0);
   const ref = React.useRef<HTMLDivElement>(null);
   const [messages, setMessages] = React.useState(() => refreshMessages());
@@ -144,13 +147,13 @@ const HomePage = (props: Props) => {
               </div>
             </Item>
           </Grid>
-          <Grid xs={5}>
-            <Item><div> <img src={nextI} />
+          <Grid xs={5} >
+            <Item sx={{height:'100%'}}><div> <img src={nextI} />
             </div>
             
-            <div>  <Box sx={{ pb: 1 }} ref={ref}>
+            <div>  <Box sx={{ pb: 1 }} ref={ref} >
       <CssBaseline />
-      <List>
+      <List sx={{ height:'140px'}}>
         {messages.map(({ primary, secondary, person }, index) => (
           <ListItem button key={index + person}>
            
@@ -158,7 +161,7 @@ const HomePage = (props: Props) => {
           </ListItem>
         ))}
       </List>
-      <Paper sx={{ position: 'static', bottom: 0, left: 0, right: 0 }} elevation={3}>
+      <Paper sx={{ position: 'static', bottom: -10, left: 0, right: 0 }} elevation={0}>
         <BottomNavigation
           showLabels
           value={value}
@@ -166,9 +169,9 @@ const HomePage = (props: Props) => {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
+          <BottomNavigationAction  icon={<RestoreIcon />} />
+          <BottomNavigationAction  icon={<FavoriteIcon />} />
+          <BottomNavigationAction  icon={<ArchiveIcon />} />
         </BottomNavigation>
       </Paper>
     </Box>
@@ -176,7 +179,7 @@ const HomePage = (props: Props) => {
     </div></Item>
           </Grid>
         </Grid>
-      </Box>
+      </Box>    
     </div>
   );
 };

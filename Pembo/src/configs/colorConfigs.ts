@@ -9,10 +9,10 @@ const colorConfigs = {
     activeColor: "#fff"
   },
   topbar: {
-    bg: "#fff",
+    bg: "rgba(255, 255, 255, 0.8)",
     color: "#000"
   },
-  mainBg: colors.grey["100"]
+  mainBg: "#fff",
 };
 
 export default colorConfigs;
