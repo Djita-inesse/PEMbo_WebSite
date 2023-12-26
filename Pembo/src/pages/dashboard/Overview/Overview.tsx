@@ -4,7 +4,7 @@ type Props = {};
 
 const Overview = (props: Props) => {
   return (
-    <div>InstallationPage</div>
+    <div>This is an overview</div>
   );
 };
 

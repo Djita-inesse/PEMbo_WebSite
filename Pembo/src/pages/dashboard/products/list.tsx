@@ -15,7 +15,7 @@ import {
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import AddIcon from '@mui/icons-material/Add';
-import mockData from '../../assets/mockData.json'
+import mockData from '../../../assets/mockData.json'
 
 const products = mockData.products;
 
