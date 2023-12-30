@@ -1,10 +1,12 @@
 import DashboardPageLayout from "../pages/dashboard/DashboardPageLayout";
-import HomePage from "../pages/home/HomePage";
+import HomePage from "../pages/home/dashboardPage";
 import { RouteType } from "./config";
+import AccounPage from "../pages/Account/AccountPage";
 import DefaultPage from "../pages/dashboard/DefaultPage";
 import DashboardIndex from "../pages/dashboard/DashboardIndex";
 import ChangelogPage from "../pages/changelog/ChangelogPage";
 import AnalyticsPage from "../pages/dashboard/AnalyticsPage";
+import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 import SaasPage from "../pages/dashboard/SaasPage";
 import ComponentPageLayout from "../pages/component/ComponentPageLayout";
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
@@ -15,6 +17,7 @@ import PollTwoTone from '@mui/icons-material/PollTwoTone';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import AlertPage from "../pages/component/AlertPage";
 import ButtonPage from "../pages/component/ButtonPage";
+import DashboardCustomizeOutlinedIcon from '@mui/icons-material/DashboardCustomizeOutlined';
 import InstallationPage from "../pages/Overview/Overview";
 import DocumentationPage from "../pages/documentation/DocumentationPage";
 
@@ -25,21 +28,21 @@ const appRoutes: RouteType[] = [
     state: "home"
   },
   {
-    path: "/Overview",
-    element: <DocumentationPage />,
-    state: "Overview",
+    path: "/home",
+    element: <HomePage />,
+    state: "home",
     sidebarProps: {
-      displayText: "Overview",
-      icon: <ArticleOutlinedIcon />
+      displayText: "Dashboard",
+      icon: <DashboardCustomizeOutlinedIcon />
     }
   },
   {
-    path: "/Analytics",
-    element: <DocumentationPage />,
-    state: "Analytics",
+    path: "/Account",
+    element: <AccounPage />,
+    state: "Account",
     sidebarProps: {
-      displayText: "Analytics",
-      icon: <PollTwoTone />
+      displayText: "Account",
+      icon: <ManageAccountsOutlinedIcon />
     }
   },
   {
