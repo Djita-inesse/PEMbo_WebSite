@@ -1,25 +1,22 @@
-import DashboardPageLayout from "../pages/dashboard/DashboardPageLayout";
-import HomePage from "../pages/home/dashboardPage";
+
+import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
-import AccounPage from "../pages/Account/AccountPage";
-import DefaultPage from "../pages/dashboard/DefaultPage";
-import DashboardIndex from "../pages/dashboard/DashboardIndex";
-import ChangelogPage from "../pages/changelog/ChangelogPage";
-import AnalyticsPage from "../pages/dashboard/AnalyticsPage";
-import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
-import SaasPage from "../pages/dashboard/SaasPage";
-import ComponentPageLayout from "../pages/component/ComponentPageLayout";
-import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
+import ComponentPageLayout from "../pages/dashboard/products/ProductPageLayout";
 import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
 import PollTwoTone from '@mui/icons-material/PollTwoTone';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
-import AlertPage from "../pages/component/AlertPage";
-import ButtonPage from "../pages/component/ButtonPage";
-import DashboardCustomizeOutlinedIcon from '@mui/icons-material/DashboardCustomizeOutlined';
-import InstallationPage from "../pages/Overview/Overview";
-import DocumentationPage from "../pages/documentation/DocumentationPage";
+import ProductsTable from "../pages/dashboard/products/list";
+import ButtonPage from "../pages/dashboard/products/create";
+import ProductPageLayout from "../pages/dashboard/products/ProductPageLayout";
+import ProductCreate from "../pages/dashboard/products/create";
+import InvoiceDetails from "../pages/dashboard/Invoices/Details";
+import InvoiceList from "../pages/dashboard/Invoices/List";
+import CustomerPageLayout from "../pages/dashboard/Customers/CustumorsPageLayout";
+import CustomerList from "../pages/dashboard/Customers/List";
+import CustomerDetail from "../pages/dashboard/Customers/Detail";
+
 
 const appRoutes: RouteType[] = [
   {
@@ -28,6 +25,7 @@ const appRoutes: RouteType[] = [
     state: "home"
   },
   {
+
     path: "/home",
     element: <HomePage />,
     state: "home",
@@ -54,77 +52,27 @@ const appRoutes: RouteType[] = [
       icon: <FileDownloadOutlinedIcon />
     }
   },
-
   {
-    path: " ",
-    element: "",
-    state: "documentation",
+    path: "/customer",
+    element: <CustomerPageLayout />,
+    state: "customers",
     sidebarProps: {
-      displayText: "Concepts",
-      
-    }
-  },
-  {
-    path: "/dashboard",
-    element: <DashboardPageLayout />,
-    state: "Customers",
-    sidebarProps: {
-      displayText: "Customers",
-      icon: <DashboardOutlinedIcon />
-    },
-    child: [
-      {
-        index: true,
-        element: <DashboardIndex />,
-        state: "dashboard.index"
-      },
-      {
-        path: "/dashboard/default",
-        element: <DefaultPage />,
-        state: "dashboard.default",
-        sidebarProps: {
-          displayText: "List"
-        },
-      },
-      {
-        path: "/dashboard/analytics",
-        element: <AnalyticsPage />,
-        state: "dashboard.analytics",
-        sidebarProps: {
-          displayText: "Details"
-        }
-      },
-      {
-        path: "/dashboard/saas",
-        element: <SaasPage />,
-        state: "dashboard.saas",
-        sidebarProps: {
-          displayText: "Edit"
-        }
-      }
-    ]
-  },
-  {
-    path: "/component",
-    element: <ComponentPageLayout />,
-    state: "Products",
-    sidebarProps: {
-      displayText: "Products",
+      displayText: "customers",
       icon: <AppsOutlinedIcon />
     },
     child: [
       {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
+        path: "/customer/list",
+        element: <CustomerList />,
+        state: "customer.list",
         sidebarProps: {
           displayText: "List"
         },
       },
       {
-        path: "/component/button",
-        element: <ButtonPage />,
-        state: "component.button",
+        path: "/customer/detail",
+        element: <CustomerDetail />,
+        state: "customer.detail",
         sidebarProps: {
           displayText: "Create"
         }
@@ -132,34 +80,35 @@ const appRoutes: RouteType[] = [
     ]
   },
   {
-    path: "/component",
-    element: <ComponentPageLayout />,
-    state: "Orders",
+    path: "/product",
+    element: <ProductPageLayout />,
+    state: "Products",
     sidebarProps: {
-      displayText: "Orders",
+      displayText: "Products",
       icon: <AppsOutlinedIcon />
     },
     child: [
       {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
+        path: "/product/list",
+        element: <ProductsTable />,
+        state: "product.list",
         sidebarProps: {
           displayText: "List"
         },
       },
       {
-        path: "/component/button",
-        element: <ButtonPage />,
-        state: "component.button",
+        path: "/product/create",
+        element: <ProductCreate />,
+        state: "product.creat",
         sidebarProps: {
-          displayText: "Details"
+          displayText: "Create"
         }
       }
     ]
   },
+
   {
-    path: "/component",
+    path: "/invoices",
     element: <ComponentPageLayout />,
     state: "Invoices",
     sidebarProps: {
@@ -168,16 +117,16 @@ const appRoutes: RouteType[] = [
     },
     child: [
       {
-        path: "/component/alert",
-        element: <AlertPage />,
+        path: "/invoices/list",
+        element: <InvoiceList />,
         state: "component.alert",
         sidebarProps: {
           displayText: "List"
         },
       },
       {
-        path: "/component/button",
-        element: <ButtonPage />,
+        path: "/invoices/detail",
+        element: <InvoiceDetails />,
         state: "component.button",
         sidebarProps: {
           displayText: "Details"
@@ -185,183 +134,6 @@ const appRoutes: RouteType[] = [
       }
     ]
   },
-  {
-    path: "/component",
-    element: <ComponentPageLayout />,
-    state: "Logistics",
-    sidebarProps: {
-      displayText: "Logistics",
-      icon: <AppsOutlinedIcon />
-    },
-    child: [
-      {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
-        sidebarProps: {
-          displayText: "Dashboard"
-        },
-      },
-      {
-        path: "/component/button",
-        element: <ButtonPage />,
-        state: "component.button",
-        sidebarProps: {
-          displayText: "Fleet"
-        }
-      }
-    ]
-  },
-  {
-    path: "/component",
-    element: <ComponentPageLayout />,
-    state: "Academy",
-    sidebarProps: {
-      displayText: "Academy",
-      icon: <AppsOutlinedIcon />
-    },
-    child: [
-      {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
-        sidebarProps: {
-          displayText: "Dashboard"
-        },
-      },
-      {
-        path: "/component/button",
-        element: <ButtonPage />,
-        state: "component.button",
-        sidebarProps: {
-          displayText: "Course"
-        }
-      }
-    ]
-  },
-  {
-    path: "/component",
-    element: <ComponentPageLayout />,
-    state: "Social Media",
-    sidebarProps: {
-      displayText: "Social Media",
-      icon: <AppsOutlinedIcon />
-    },
-    child: [
-      {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
-        sidebarProps: {
-          displayText: "Profile"
-        },
-      },
-      {
-        path: "/component/button",
-        element: <ButtonPage />,
-        state: "component.button",
-        sidebarProps: {
-          displayText: "Feed"
-        }
-      }
-    ]
-  },
-  {
-    path: "/documentation",
-    element: <DocumentationPage />,
-    state: "Mail",
-    sidebarProps: {
-      displayText: "Mail",
-      icon: <ArticleOutlinedIcon />
-    }
-  },
-  {
-    path: "/documentation",
-    element: <DocumentationPage />,
-    state: "Chat",
-    sidebarProps: {
-      displayText: "Chat",
-      icon: <ArticleOutlinedIcon />
-    }
-  },
-  {
-    path: "/component",
-    element: <ComponentPageLayout />,
-    state: "Auth",
-    sidebarProps: {
-      displayText: "Auth",
-      icon: <AppsOutlinedIcon />
-    },
-    child: [
-      {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
-        sidebarProps: {
-          displayText: "Login"
-        },
-      },
-      {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
-        sidebarProps: {
-          displayText: "Register"
-        },
-      },
-      {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
-        sidebarProps: {
-          displayText: "Forgot Password"
-        },
-      },
-      {
-        path: "/component/alert",
-        element: <AlertPage />,
-        state: "component.alert",
-        sidebarProps: {
-          displayText: "Resert Password"
-        },
-      },
-      {
-        path: "/component/button",
-        element: <ButtonPage />,
-        state: "component.button",
-        sidebarProps: {
-          displayText: "Verify Code"
-        }
-      }
-    ]
-  },
-  {
-    path: "/changelog",
-    element: <ChangelogPage />,
-    state: "Pricing",
-    sidebarProps: {
-      displayText: "Pricing",
-      icon: <FormatListBulletedOutlinedIcon />
-    }
-  },
-  {
-    path: "/changelog",
-    element: <ChangelogPage />,
-    state: "Checkout",
-    sidebarProps: {
-      displayText: "Checkout",
-      icon: <FormatListBulletedOutlinedIcon />
-    }
-  },
-  {
-    path: "/changelog",
-    element: <ChangelogPage />,
-    state: "Contact",
-    sidebarProps: {
-      displayText: "Contact",
-      icon: <FormatListBulletedOutlinedIcon />
-    }
-  }
 
 ];
 
