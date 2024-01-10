@@ -1,3 +1,4 @@
+
 import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
 import ComponentPageLayout from "../pages/dashboard/products/ProductPageLayout";
@@ -8,7 +9,6 @@ import PollTwoTone from '@mui/icons-material/PollTwoTone';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import ProductsTable from "../pages/dashboard/products/list";
 import ButtonPage from "../pages/dashboard/products/create";
-import InstallationPage from "../pages/dashboard/Overview/Overview";
 import ProductPageLayout from "../pages/dashboard/products/ProductPageLayout";
 import ProductCreate from "../pages/dashboard/products/create";
 import InvoiceDetails from "../pages/dashboard/Invoices/Details";
@@ -17,11 +17,31 @@ import CustomerPageLayout from "../pages/dashboard/Customers/CustumorsPageLayout
 import CustomerList from "../pages/dashboard/Customers/List";
 import CustomerDetail from "../pages/dashboard/Customers/Detail";
 
+
 const appRoutes: RouteType[] = [
   {
     index: true,
     element: <HomePage />,
     state: "home"
+  },
+  {
+
+    path: "/home",
+    element: <HomePage />,
+    state: "home",
+    sidebarProps: {
+      displayText: "Dashboard",
+      icon: <DashboardCustomizeOutlinedIcon />
+    }
+  },
+  {
+    path: "/Account",
+    element: <AccounPage />,
+    state: "Account",
+    sidebarProps: {
+      displayText: "Account",
+      icon: <ManageAccountsOutlinedIcon />
+    }
   },
   {
     path: "/E-Commerce",
@@ -30,16 +50,6 @@ const appRoutes: RouteType[] = [
     sidebarProps: {
       displayText: "E-Commerce",
       icon: <FileDownloadOutlinedIcon />
-    }
-  },
-
-  {
-    path: " ",
-    element: "",
-    state: "documentation",
-    sidebarProps: {
-      displayText: "Concepts",
-
     }
   },
   {

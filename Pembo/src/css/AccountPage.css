@@ -1,0 +1,58 @@
+.title{
+    margin-top: 5%;
+}
+
+.title p{
+    font-size: 2.0833rem;
+}
+
+.Container {
+    flex-direction: row;
+    display: flex;
+    height: 293px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.avatar {
+    display: flex;
+}
+
+.avatar button{
+    height: 30px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    outline: 0px;
+    border: 0px currentcolor;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 0.8125rem;
+    line-height: 1.75;
+    min-width: 64px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: inherit;
+    border-radius: 12px;
+    text-transform: none;
+    padding: 7px 12px;
+}
+
+.TextField {
+    margin-top: 13%;
+}
+.TextField{
+    
+}
