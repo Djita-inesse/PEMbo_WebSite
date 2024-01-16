@@ -1,14 +1,11 @@
 
-import HomePage from "../pages/home/dashboardPage";
+import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
 import ComponentPageLayout from "../pages/dashboard/products/ProductPageLayout";
 import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
-import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
-import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
-import PollTwoTone from '@mui/icons-material/PollTwoTone';
+import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import ProductsTable from "../pages/dashboard/products/list";
-import AccounPage from "../pages/Account/AccountPage"
 import ButtonPage from "../pages/dashboard/products/create";
 import ProductPageLayout from "../pages/dashboard/products/ProductPageLayout";
 import ProductCreate from "../pages/dashboard/products/create";
@@ -18,6 +15,7 @@ import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlin
 import DashboardCustomizeOutlinedIcon from '@mui/icons-material/DashboardCustomizeOutlined';
 import CustomerPageLayout from "../pages/dashboard/Customers/CustumorsPageLayout";
 import CustomerList from "../pages/dashboard/Customers/List";
+import DashboardCustomizeOutlinedIcon from '@mui/icons-material/DashboardCustomizeOutlined';
 import CustomerDetail from "../pages/dashboard/Customers/Detail";
 
 
