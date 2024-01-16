@@ -1,5 +1,5 @@
 
-import HomePage from "../pages/home/HomePage";
+import HomePage from "../pages/home/dashboardPage";
 import { RouteType } from "./config";
 import ComponentPageLayout from "../pages/dashboard/products/ProductPageLayout";
 import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
@@ -8,11 +8,14 @@ import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBullet
 import PollTwoTone from '@mui/icons-material/PollTwoTone';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import ProductsTable from "../pages/dashboard/products/list";
+import AccounPage from "../pages/Account/AccountPage"
 import ButtonPage from "../pages/dashboard/products/create";
 import ProductPageLayout from "../pages/dashboard/products/ProductPageLayout";
 import ProductCreate from "../pages/dashboard/products/create";
 import InvoiceDetails from "../pages/dashboard/Invoices/Details";
 import InvoiceList from "../pages/dashboard/Invoices/List";
+import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
+import DashboardCustomizeOutlinedIcon from '@mui/icons-material/DashboardCustomizeOutlined';
 import CustomerPageLayout from "../pages/dashboard/Customers/CustumorsPageLayout";
 import CustomerList from "../pages/dashboard/Customers/List";
 import CustomerDetail from "../pages/dashboard/Customers/Detail";
@@ -36,20 +39,11 @@ const appRoutes: RouteType[] = [
   },
   {
     path: "/Account",
-    element: <AccounPage />,
+    element: <AccounPage/>,
     state: "Account",
     sidebarProps: {
       displayText: "Account",
       icon: <ManageAccountsOutlinedIcon />
-    }
-  },
-  {
-    path: "/E-Commerce",
-    element: <InstallationPage />,
-    state: "E-Commerce",
-    sidebarProps: {
-      displayText: "E-Commerce",
-      icon: <FileDownloadOutlinedIcon />
     }
   },
   {
