@@ -1,9 +1,8 @@
 
-import HomePage from "../pages/home/HomePage";
+// import HomePage from "../pages/home/HomePage";
 import { RouteType } from "./config";
 import ComponentPageLayout from "../pages/dashboard/products/ProductPageLayout";
 import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
-import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import ProductsTable from "../pages/dashboard/products/list";
 import ButtonPage from "../pages/dashboard/products/create";
@@ -12,32 +11,32 @@ import ProductCreate from "../pages/dashboard/products/create";
 import InvoiceDetails from "../pages/dashboard/Invoices/Details";
 import InvoiceList from "../pages/dashboard/Invoices/List";
 import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
-import DashboardCustomizeOutlinedIcon from '@mui/icons-material/DashboardCustomizeOutlined';
 import CustomerPageLayout from "../pages/dashboard/Customers/CustumorsPageLayout";
 import CustomerList from "../pages/dashboard/Customers/List";
 import DashboardCustomizeOutlinedIcon from '@mui/icons-material/DashboardCustomizeOutlined';
 import CustomerDetail from "../pages/dashboard/Customers/Detail";
+import AccountPage from "../pages/Account/AccountPage"
 
 
 const appRoutes: RouteType[] = [
-  {
-    index: true,
-    element: <HomePage />,
-    state: "home"
-  },
-  {
+  // {
+  //   index: true,
+  //   element: <HomePage />,
+  //   state: "home"
+  // },
+  // {
 
-    path: "/home",
-    element: <HomePage />,
-    state: "home",
-    sidebarProps: {
-      displayText: "Dashboard",
-      icon: <DashboardCustomizeOutlinedIcon />
-    }
-  },
+  //   path: "/home",
+  //   element: <HomePage />,
+  //   state: "home",
+  //   sidebarProps: {
+  //     displayText: "Dashboard",
+  //     icon: <DashboardCustomizeOutlinedIcon />
+  //   }
+  // },
   {
     path: "/Account",
-    element: <AccounPage/>,
+    element: <AccountPage/>,
     state: "Account",
     sidebarProps: {
       displayText: "Account",

@@ -29,7 +29,7 @@ import {
   TableHead,
   InputAdornment,
 } from "@mui/material";
-const [showPassword, setShowPassword] = React.useState(false);
+
 
 
 interface TabPanelProps {
@@ -87,6 +87,7 @@ function a11yProps(index: number) {
 
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
+  const [showPassword, setShowPassword] = React.useState(false);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
