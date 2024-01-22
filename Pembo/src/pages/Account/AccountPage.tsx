@@ -577,12 +577,12 @@ export default function BasicTabs() {
                         >
                           <TableCell component="th" scope="row">
                             <div>
-                              <Stack direction="row" spacing={2}>
+                              <Stack direction="row" spacing={2} >
                                 <Avatar
                                   alt="Remy Sharp"
                                   src="/static/images/avatar/1.jpg"
                                   sx={{
-                                    marginTop: "20px",
+                                    marginTop: "5%",
                                     marginRight: "-3%",
                                   }}
                                 />
