@@ -2,7 +2,9 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import EastIcon from "@mui/icons-material/East";
 import Box from "@mui/material/Box";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import avartaricon from "../../assets/images/person-standing.png";
@@ -30,8 +32,6 @@ import {
   InputAdornment,
 } from "@mui/material";
 
-
-
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -45,6 +45,15 @@ const rows = [
   createData("11 Dec 2023", 4.99, "View Invoice"),
   createData("11 Nov 2023", 4.99, "View Invoice"),
   createData("11 Oct 2023", 4.99, "View Invoice"),
+];
+function createMenberData(Member: string, role: string, link: string) {
+  return { Member, role, link };
+}
+
+const memberRow = [
+  createMenberData("Cao Yu", "Standard", ""),
+  createMenberData("Siegbert Gottfried", "Owner", ""),
+  createMenberData("Satoru gojo", "Standard", ""),
 ];
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
@@ -101,7 +110,6 @@ export default function BasicTabs() {
   }));
 
   const [spacing, setSpacing] = React.useState(2);
-
 
   return (
     <>
@@ -500,12 +508,10 @@ export default function BasicTabs() {
           </CustomTabPanel>
           <CustomTabPanel value={value} index={2}>
             <div className="Invite_members">
-              <div className="panel3">
+              <div className="panelInvite">
                 <p>Invite members</p>
-                <h6>You currently pay for 2 Editor Seats.</h6>
-              </div>
-
-              <div className="element">
+                <h6>You currently pay for 2 Editor Seats.</h6>       
+                     <div className="element">
                 <TextField
                   id="outlined-basic"
                   label="Email Adress"
@@ -534,8 +540,82 @@ export default function BasicTabs() {
                   Send Invite
                 </Button>
               </div>
+              </div>
+  {" "}
+              <div className="member">
+                <TableContainer component={Paper}>
+                  <Table
+                    sx={{ minWidth: 650, color: "#111927" }}
+                    aria-label="simple table"
+                  >
+                    <TableHead>
+                      <TableRow
+                        sx={{
+                          color: "rgb(47, 55, 70)",
+                          background: "rgb(248, 249, 250)",
+                          borderBottom: "none",
+                          fontSize: "12px",
+                          fontWeight: 600,
+                          letterSpacing: "0.5px",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        <TableCell>MEMBER</TableCell>
+                        <TableCell align="left">ROLE</TableCell>
+                        <TableCell align="right"> </TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {memberRow.map((row) => (
+                        <TableRow
+                          key={row.Member}
+                          sx={{
+                            "&:last-child td, &:last-child th": {
+                              border: 0,
+                            },
+                          }}
+                        >
+                          <TableCell component="th" scope="row">
+                            <div>
+                              <Stack direction="row" spacing={2}>
+                                <Avatar
+                                  alt="Remy Sharp"
+                                  src="/static/images/avatar/1.jpg"
+                                  sx={{
+                                    marginTop: "20px",
+                                    marginRight: "-3%",
+                                  }}
+                                />
+                                <p>
+                                  {" "}
+                                  {row.Member}
+                                  <br />
+                                  <h6>cao.yu@devias.io</h6>
+                                </p>
+                              </Stack>
+                            </div>
+                          </TableCell>
+                          <TableCell align="left">{row.role}</TableCell>
+                          <TableCell align="right">
+                            {" "}
+                            <a href="#">
+                              <MoreHorizIcon
+                                sx={{
+                                  width: "1.4em",
+                                  height: "1.4em",
+                                  fontSize: "1.5rem",
+                                }}
+                              />
+                              {row.link}
+                            </a>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </div>
             </div>
-            <div></div>
           </CustomTabPanel>
           <CustomTabPanel value={value} index={3}>
             <div className="Container1">
@@ -586,11 +666,92 @@ export default function BasicTabs() {
             </div>
           </CustomTabPanel>
           <CustomTabPanel value={value} index={4}>
-            <div className="Container1">
+            <div className="ContainerSecu">
               <div className="panel1">
                 <p>Change password</p>
               </div>
-              <div className="panel2"></div>
+
+              <div className="panel2">
+                <div></div>
+                <p>Multi Factor Authentication</p>
+                <Grid container spacing={2} columns={16}>
+                  <Grid item xs={9}>
+                    <Item>
+                      <div>
+                        <span> </span> <span> off</span>
+                        <h5>Authenticator App</h5>
+                        <h6>
+                          Use an authenticator app to generate one time security
+                          codes.
+                        </h6>
+                        <Button variant="text">
+                          set up <EastIcon sx={{ fontSize: "18px" }} />{" "}
+                        </Button>
+                      </div>
+                    </Item>
+                  </Grid>
+                  <Grid item xs={9}>
+                    <Item>
+                      <div>
+                        <span> </span> <span> off</span>
+                        <h5>Text Message</h5>
+                        <h6>
+                          Use your mobile phone to receive security codes via
+                          SMS.
+                        </h6>
+                        <Button variant="text">
+                          set up <EastIcon sx={{ fontSize: "18px" }} />{" "}
+                        </Button>
+                      </div>
+                    </Item>
+                  </Grid>
+                </Grid>
+
+                <div className="panel3">
+                  <p>Login history</p>
+                  <h6>Your recent login activity</h6>
+                </div>
+                <TableContainer component={Paper}>
+                  <Table
+                    sx={{ minWidth: 650, color: "#111927" }}
+                    aria-label="simple table"
+                  >
+                    <TableHead>
+                      <TableRow
+                        sx={{
+                          color: "#111927",
+                          background: "rgb(248, 249, 250)",
+                        }}
+                      >
+                        <TableCell>LOGIN TYPE</TableCell>
+                        <TableCell align="left">IP ADDRESS</TableCell>
+                        <TableCell align="left"> CLIENT </TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {rows.map((row) => (
+                        <TableRow
+                          key={row.date}
+                          sx={{
+                            "&:last-child td, &:last-child th": {
+                              border: 0,
+                            },
+                          }}
+                        >
+                          <TableCell component="th" scope="row">
+                            {row.date}
+                          </TableCell>
+                          <TableCell align="left">{row.total}</TableCell>
+                          <TableCell align="right">
+                            {" "}
+                            <a href="#">{row.link}</a>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </div>
             </div>
           </CustomTabPanel>
         </Box>
