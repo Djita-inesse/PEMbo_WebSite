@@ -128,7 +128,6 @@ export default function BasicTabs() {
               <Tab label="Billing" {...a11yProps(1)} />
               <Tab label="Team" {...a11yProps(2)} />
               <Tab label="Notifications" {...a11yProps(3)} />
-              <Tab label="Security" {...a11yProps(4)} />
             </Tabs>
           </Box>
           <CustomTabPanel value={value} index={0}>
@@ -509,8 +508,11 @@ export default function BasicTabs() {
           <CustomTabPanel value={value} index={2}>
             <div className="Invite_members">
               <div className="panelInvite">
-                <p>Invite members</p>
-                <h6>You currently pay for 2 Editor Seats.</h6>       
+                <div>
+                    <p>Invite members</p>
+                <h6>You currently pay for 2 Editor Seats.</h6> 
+                </div>
+                    
                      <div className="element">
                 <TextField
                   id="outlined-basic"
@@ -579,12 +581,10 @@ export default function BasicTabs() {
                             <div>
                               <Stack direction="row" spacing={2} >
                                 <Avatar
+                                className="teamAvartar"
                                   alt="Remy Sharp"
                                   src="/static/images/avatar/1.jpg"
-                                  sx={{
-                                    marginTop: "5%",
-                                    marginRight: "-3%",
-                                  }}
+      
                                 />
                                 <p>
                                   {" "}
@@ -665,95 +665,7 @@ export default function BasicTabs() {
               </div>
             </div>
           </CustomTabPanel>
-          <CustomTabPanel value={value} index={4}>
-            <div className="ContainerSecu">
-              <div className="panel1">
-                <p>Change password</p>
-              </div>
-
-              <div className="panel2">
-                <div></div>
-                <p>Multi Factor Authentication</p>
-                <Grid container spacing={2} columns={16}>
-                  <Grid item xs={9}>
-                    <Item>
-                      <div>
-                        <span> </span> <span> off</span>
-                        <h5>Authenticator App</h5>
-                        <h6>
-                          Use an authenticator app to generate one time security
-                          codes.
-                        </h6>
-                        <Button variant="text">
-                          set up <EastIcon sx={{ fontSize: "18px" }} />{" "}
-                        </Button>
-                      </div>
-                    </Item>
-                  </Grid>
-                  <Grid item xs={9}>
-                    <Item>
-                      <div>
-                        <span> </span> <span> off</span>
-                        <h5>Text Message</h5>
-                        <h6>
-                          Use your mobile phone to receive security codes via
-                          SMS.
-                        </h6>
-                        <Button variant="text">
-                          set up <EastIcon sx={{ fontSize: "18px" }} />{" "}
-                        </Button>
-                      </div>
-                    </Item>
-                  </Grid>
-                </Grid>
-
-                <div className="panel3">
-                  <p>Login history</p>
-                  <h6>Your recent login activity</h6>
-                </div>
-                <TableContainer component={Paper}>
-                  <Table
-                    sx={{ minWidth: 650, color: "#111927" }}
-                    aria-label="simple table"
-                  >
-                    <TableHead>
-                      <TableRow
-                        sx={{
-                          color: "#111927",
-                          background: "rgb(248, 249, 250)",
-                        }}
-                      >
-                        <TableCell>LOGIN TYPE</TableCell>
-                        <TableCell align="left">IP ADDRESS</TableCell>
-                        <TableCell align="left"> CLIENT </TableCell>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody>
-                      {rows.map((row) => (
-                        <TableRow
-                          key={row.date}
-                          sx={{
-                            "&:last-child td, &:last-child th": {
-                              border: 0,
-                            },
-                          }}
-                        >
-                          <TableCell component="th" scope="row">
-                            {row.date}
-                          </TableCell>
-                          <TableCell align="left">{row.total}</TableCell>
-                          <TableCell align="right">
-                            {" "}
-                            <a href="#">{row.link}</a>
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
-              </div>
-            </div>
-          </CustomTabPanel>
+      
         </Box>
       </>
     </>
