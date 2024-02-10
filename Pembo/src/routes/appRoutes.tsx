@@ -13,6 +13,7 @@ import InvoiceList from "../pages/dashboard/Invoices/List";
 import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 import CustomerPageLayout from "../pages/dashboard/Customers/CustumorsPageLayout";
 import CustomerList from "../pages/dashboard/Customers/List";
+import CustomerEdit from "../pages/dashboard/Customers/Edit";
 import DashboardCustomizeOutlinedIcon from '@mui/icons-material/DashboardCustomizeOutlined';
 import CustomerDetail from "../pages/dashboard/Customers/Detail";
 import AccountPage from "../pages/Account/AccountPage"
@@ -66,6 +67,14 @@ const appRoutes: RouteType[] = [
         state: "customer.detail",
         sidebarProps: {
           displayText: "Create"
+        }
+      },
+      {
+        path: "/customer/Edit",
+        element: <CustomerEdit />,
+        state: "customer.Edit",
+        sidebarProps: {
+          displayText: "Edit"
         }
       }
     ]
