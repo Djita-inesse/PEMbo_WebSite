@@ -27,6 +27,7 @@ import AddIcon from '@mui/icons-material/Add';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import mockData from '../../../assets/mockData.json';
 import { useState } from 'react';
+import { log } from 'console';
 
 const { users, addresses, } = mockData;
 type Props = {};
@@ -86,6 +87,8 @@ const CustomerPageLayout = (props: Props) => {
   // Helper function to update the displayed users based on the search text
   const updateuserssDisplay = (text: string) => {
     seText(text)
+    console.log(text)
+    console.log(users)
     setDisplayedusers(users.filter(user => user.username.toLowerCase().includes(text.toLowerCase())))
   }
 
@@ -180,18 +183,19 @@ const CustomerPageLayout = (props: Props) => {
                       src={"https://loremflickr.com/640/480?lock=2695804426911744"}
                       style={{ width: '40px', height: '40px', marginRight: '10px', borderRadius:'40px', background:"red" }}
                     />
-                    {isMobile ? user.username.slice(0, 15) + '...' : user.first_name}
-                    <Typography sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    {isMobile ? user.username.slice(0, 15) + '...' : user.username}
+                     {/* Why adding the address here since we already have an address column */}
+                    {/* <Typography sx={{ display: { xs: 'none', sm: 'block' } }}>
                       {getaddressesName(user.id)}
-                    </Typography>
+                    </Typography> */}
                   </Box>
                 </TableCell>
-                <TableCell align="right">{`$${user.first_name}`}</TableCell>
-                <TableCell align="right">{`$${user.last_name}`}</TableCell>
-                <TableCell align="right">{`$${user.email}`}</TableCell>
-                <TableCell align="right">{`$${user.phone_number}`}</TableCell>
+                <TableCell align="right">{`${user.first_name}`}</TableCell>
+                <TableCell align="right">{`${user.last_name}`}</TableCell>
+                <TableCell align="right">{`${user.email}`}</TableCell>
+                <TableCell align="right">{`${user.phone_number}`}</TableCell>
                 <TableCell align="right">{getaddressesName(user.id)}</TableCell>
-                <TableCell align="right">{`$${user.role}`}</TableCell>
+                <TableCell align="right">{`${user.role}`}</TableCell>
                 <TableCell align="right">
                   <IconButton onClick={navigateToEdit} color="primary">
                     <EditIcon />
