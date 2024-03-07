@@ -19,12 +19,15 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
+import EmailRoundedIcon from '@mui/icons-material/EmailOutlined';
 import colorConfigs from "../../configs/colorConfigs";
+import CloseIcon from '@mui/icons-material/Close';
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import TipsAndUpdatesOutlinedIcon from "@mui/icons-material/TipsAndUpdatesOutlined";
 import sizeConfigs from "../../configs/sizeConfigs";
 import React from "react";
+import "../../css/Topbar.css";
 import { PersonAdd, Settings, Logout } from "@mui/icons-material";
 
 export default function Topbar() {
@@ -40,12 +43,20 @@ export default function Topbar() {
 
   //Avartar btn action
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [anchorEl2, setAnchorEl2] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+  const open2 = Boolean(anchorEl2);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+  const handleClick2 = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl2(event.currentTarget);
+  };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  const handleClose2 = () => {
+    setAnchorEl2(null);
   };
   const navigateToAccount = () => {
     window.location.href = '/Account';
@@ -332,8 +343,156 @@ export default function Topbar() {
               </Menu>
             </React.Fragment>
           </Box>
+          <Box
+            sx={{
+              width: `calc(100% - ${sizeConfigs.sidebar.width})`,
+              ml: sizeConfigs.sidebar.width,
+              boxShadow: "unset",
+              display: "flex",
+              backgroundColor: colorConfigs.topbar.bg,
+              color: colorConfigs.topbar.color,
+            }}
+          >
+            <React.Fragment>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  textAlign: "center",
+                  marginLeft: "1270%",
+                  marginTop: "-48px",
+                }}
+              >
+               
+     <IconButton
+                    onClick={handleClick2}
+                    size="small"
+                    sx={{ ml: 2 }}
+                    aria-controls={open ? "Notifications" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? "true" : undefined}
+                  >
+                    <Badge badgeContent={4} color="primary"> <NotificationsIcon fontSize="medium"/></Badge>
+                  
+                  </IconButton>
+
+               
+              </Box>
+
+              <Menu
+                anchorEl={anchorEl2}
+                id="Notifications"
+                open={open2}
+                onClose={handleClose2}
+                onClick={handleClose2}
+                PaperProps={{
+                  elevation: 0,
+                  sx: {
+                    overflow: "visible",
+                    filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                    mt: 1.5,
+                    "& .MuiAvatar-root": {
+                      width: 37,
+                      height: 37,
+                      ml: -0.5,
+                      mr: 1,
+                    },
+                    "&:before": {
+                      content: '""',
+                      display: "block",
+                      position: "absolute",
+                      top: 0,
+                      right: 14,
+                      width: 10,
+                      height: 10,
+                      bgcolor: "background.paper",
+                      transform: "translateY(-50%) rotate(45deg)",
+                      zIndex: 0,
+                    },
+                  },
+                }}
+                transformOrigin={{ horizontal: "right", vertical: "top" }}
+                anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+              >
+                <div className="messIcon">
+                < EmailRoundedIcon />
+                </div>
+                <MenuItem >
+                <div className="primary">
+                 <div className="NotAvartar"><Avatar 
+                 src="../../css/img.jpg"
+                 />
+                  </div> 
+                  <div className="NotText">
+                  <p>Jie Yan added a new job <a href="">Remote React / React Native Developer</a> </p>
+                    <h6>Mar 4, 08:39 PM</h6>
+                  </div>
+                  <div>
+                  <CloseIcon />
+                  </div>
+                </div>
+                   
+                </MenuItem>
+                <MenuItem onClick={handleClose2}>
+                <div className="primary">
+                 <div className="NotAvartar"><Avatar />
+                  </div> 
+                  <div className="NotText">
+                  <p>Jie Yan added a new job <a href="">Remote React / React Native Developer</a> </p>
+                    <h6>Mar 4, 08:39 PM</h6>
+                  </div>
+                  <div>
+                  <CloseIcon />
+                  </div>
+                </div>
+                </MenuItem>
+                <Divider />
+                <MenuItem onClick={handleClose2}>
+                <div className="primary">
+                 <div className="NotAvartar"><Avatar />
+                  </div> 
+                  <div className="NotText">
+                  <p>Jie Yan added a new job <a href="">Remote React / React Native Developer</a> </p>
+                    <h6>Mar 4, 08:39 PM</h6>
+                  </div>
+                  <div>
+                  <CloseIcon />
+                  </div>
+                </div>
+                </MenuItem>
+                <MenuItem onClick={handleClose2}>
+                <div className="primary">
+                 <div className="NotAvartar"><Avatar />
+                  </div> 
+                  <div className="NotText">
+                    <p>Jie Yan added a new job Remote React / React Native Developer</p>
+                    <h6>Mar 4, 08:39 PM</h6>
+                  </div>
+                  <div>
+                  <CloseIcon />
+                  </div>
+                </div>
+                </MenuItem>
+                <MenuItem onClick={handleClose2}>
+                <div className="primary">
+                 <div className="NotAvartar"><Avatar />
+                  </div> 
+                  <div className="NotText">
+                    <p>Jie Yan added a new job <a href="">Remote React / React Native Developer</a> </p>
+                    <h6>Mar 4, 08:39 PM</h6>
+                  </div>
+                  <div>
+                  <CloseIcon />
+                  </div>
+                </div>
+                </MenuItem>
+              </Menu>
+            </React.Fragment>
+          </Box>
           
-        </Typography>
+        </Typography> 
+        
+       
       </Toolbar>
     </AppBar>
   );
@@ -359,3 +518,4 @@ export default function Topbar() {
     </AppBar>
   );
 };*/
+c:\Users\inesd\Desktop\PEMbo_WebSite-1\Pembo\src\css\Topbar.css

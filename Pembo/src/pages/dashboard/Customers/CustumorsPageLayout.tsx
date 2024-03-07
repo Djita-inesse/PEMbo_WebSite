@@ -27,7 +27,6 @@ import AddIcon from '@mui/icons-material/Add';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import mockData from '../../../assets/mockData.json';
 import { useState } from 'react';
-import { log } from 'console';
 
 const { users, addresses, } = mockData;
 type Props = {};
@@ -38,7 +37,9 @@ interface TabPanelProps {
 }
 function CustomTabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
-
+  const navigateToCreate = () => {
+    window.location.href = '/custumers/edit';
+  }
   return (
     <div
       role="tabpanel"
@@ -87,9 +88,7 @@ const CustomerPageLayout = (props: Props) => {
   // Helper function to update the displayed users based on the search text
   const updateuserssDisplay = (text: string) => {
     seText(text)
-    console.log(text)
-    console.log(users)
-    setDisplayedusers(users.filter(user => user.username.toLowerCase().includes(text.toLowerCase())))
+    setDisplayedusers(users.filter(user => user.first_name.toLowerCase().includes(text.toLowerCase())))
   }
 
   // Helper function to update the displayed products based on the selected addresses
@@ -116,7 +115,7 @@ const CustomerPageLayout = (props: Props) => {
   }*/
 
   const navigateToEdit = () => {
-    window.location.href = '/Customers/Edit';
+    window.location.href = '/Customer/Edit';
   }
   return (
     
@@ -128,7 +127,7 @@ const CustomerPageLayout = (props: Props) => {
 
       <div className='addbtn'>
 
-        <Button variant="contained"> + Add</Button>
+        <Button variant="contained" onClick={navigateToEdit}> + Add</Button>
       </div>{" "}
     </div><div>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -144,7 +143,7 @@ const CustomerPageLayout = (props: Props) => {
         <Box sx={{ mb: 3 }}>
         <TextField
           sx={{ mb: 2, width: '100%' }}
-          placeholder="Search by username"
+          placeholder="Search by First Name"
           InputProps={{
             startAdornment: <SearchIcon />,
           }}
@@ -161,7 +160,7 @@ const CustomerPageLayout = (props: Props) => {
         <Table sx={{ minWidth: 650 }} aria-label="users table">
           <TableHead>
             <TableRow>
-              <TableCell>username</TableCell>
+              <TableCell>Avatar</TableCell>
               <TableCell align="right">First Name</TableCell>
               <TableCell align="right">Last Name</TableCell>
               <TableCell align="right">Email</TableCell>
@@ -181,13 +180,10 @@ const CustomerPageLayout = (props: Props) => {
                   <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <img
                       src={"https://loremflickr.com/640/480?lock=2695804426911744"}
-                      style={{ width: '40px', height: '40px', marginRight: '10px', borderRadius:'40px', background:"red" }}
+                      style={{ width: '50px', height: '50px', marginRight: '0px', borderRadius:'40px' }}
                     />
-                    {isMobile ? user.username.slice(0, 15) + '...' : user.username}
-                     {/* Why adding the address here since we already have an address column */}
-                    {/* <Typography sx={{ display: { xs: 'none', sm: 'block' } }}>
-                      {getaddressesName(user.id)}
-                    </Typography> */}
+               
+                 
                   </Box>
                 </TableCell>
                 <TableCell align="right">{`${user.first_name}`}</TableCell>
