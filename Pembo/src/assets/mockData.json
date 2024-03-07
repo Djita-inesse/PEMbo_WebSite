@@ -2,315 +2,315 @@
   "users": [
     {
       "id": 1,
-      "username": "Germaine11",
-      "password": "qOqjztRDTEyBVc7",
-      "email": "Micheal61@yahoo.com",
+      "username": "Marjolaine35",
+      "password": "L7BXdUgyWATFswu",
+      "email": "Sedrick89@gmail.com",
       "role": "Admin",
-      "first_name": "Larry",
-      "last_name": "Grady",
-      "phone_number": "323-514-5678 x29158"
+      "first_name": "Vivian",
+      "last_name": "Stokes",
+      "phone_number": "(960) 636-6018 x941"
     },
     {
       "id": 2,
-      "username": "Phoebe.Wehner",
-      "password": "sKXP3uWEAednc9f",
-      "email": "Kole7@gmail.com",
+      "username": "Adrain_Glover",
+      "password": "GzoHSbtH34HFpMa",
+      "email": "Thora66@yahoo.com",
       "role": "Customer",
-      "first_name": "Bessie",
-      "last_name": "Hane",
-      "phone_number": "1-898-469-5240 x507"
+      "first_name": "Erick",
+      "last_name": "Cronin",
+      "phone_number": "(576) 652-2972 x83649"
     },
     {
       "id": 3,
-      "username": "Horacio.Donnelly6",
-      "password": "SU5Y1txtGomeyRX",
-      "email": "Julia.Dooley71@gmail.com",
-      "role": "Admin",
-      "first_name": "Jody",
-      "last_name": "Larson",
-      "phone_number": "334.774.6847"
+      "username": "Pierre_Walsh77",
+      "password": "0ocF_N0NFxxqDsi",
+      "email": "Priscilla_Kshlerin@yahoo.com",
+      "role": "Customer",
+      "first_name": "Gus",
+      "last_name": "Kozey",
+      "phone_number": "291.525.7391"
     },
     {
       "id": 4,
-      "username": "Ida_Moen",
-      "password": "AQGHah08z4nOWH1",
-      "email": "Imani_Dietrich27@yahoo.com",
+      "username": "Payton_Heidenreich25",
+      "password": "LQSjdsFMP5hGajF",
+      "email": "Payton_Kertzmann53@hotmail.com",
       "role": "Admin",
-      "first_name": "Karine",
-      "last_name": "Legros",
-      "phone_number": "(757) 827-6078 x4911"
+      "first_name": "Jonas",
+      "last_name": "Hettinger",
+      "phone_number": "1-852-447-9441"
     },
     {
       "id": 5,
-      "username": "Santos.Carroll",
-      "password": "rJUhKykpQ5ke53F",
-      "email": "Jordyn55@gmail.com",
+      "username": "Thaddeus_Murphy-Connelly",
+      "password": "u6dJwbTc7UcnSMF",
+      "email": "Ambrose.Sawayn@hotmail.com",
       "role": "Admin",
-      "first_name": "Jany",
-      "last_name": "Gibson",
-      "phone_number": "1-487-237-9644 x483"
+      "first_name": "Chase",
+      "last_name": "Trantow",
+      "phone_number": "(354) 558-1074 x6676"
     },
     {
       "id": 6,
-      "username": "Merl.Johns51",
-      "password": "x0k7bZ3hoReAqqO",
-      "email": "Irma_Cronin77@gmail.com",
-      "role": "Customer",
-      "first_name": "Ansel",
-      "last_name": "Tillman",
-      "phone_number": "297-644-4704"
+      "username": "Cindy22",
+      "password": "qDXefvuCrR3MWTQ",
+      "email": "Roma_Jacobs@yahoo.com",
+      "role": "Admin",
+      "first_name": "Brendan",
+      "last_name": "Cassin",
+      "phone_number": "255.888.2729 x1029"
     },
     {
       "id": 7,
-      "username": "Corbin_Breitenberg38",
-      "password": "E54fzqnK0sE9PRg",
-      "email": "Kacie_Mraz@gmail.com",
-      "role": "Admin",
-      "first_name": "Jacinthe",
-      "last_name": "Hudson",
-      "phone_number": "(436) 479-2227"
+      "username": "Ezekiel84",
+      "password": "lXLMn_S00tPTsaD",
+      "email": "Brooklyn24@gmail.com",
+      "role": "Customer",
+      "first_name": "Marcelino",
+      "last_name": "Lueilwitz-Gorczany",
+      "phone_number": "(442) 468-2451 x747"
     },
     {
       "id": 8,
-      "username": "Hildegard_Smitham",
-      "password": "0bFUF02xcHfMXoZ",
-      "email": "Carter.Christiansen@hotmail.com",
-      "role": "Customer",
-      "first_name": "Joannie",
-      "last_name": "Romaguera",
-      "phone_number": "396.666.9823 x04428"
+      "username": "Onie_Wilkinson47",
+      "password": "vBMY0paWldNaQ8F",
+      "email": "Fredy_Littel@hotmail.com",
+      "role": "Admin",
+      "first_name": "Monserrate",
+      "last_name": "Gerlach",
+      "phone_number": "(945) 904-3240 x9315"
     }
   ],
   "addresses": [
     {
       "id": 1,
       "user_id": 1,
-      "city": "West Dillontown",
-      "state": "Louisiana",
-      "zip": "70216-5186"
+      "city": "Hauckton",
+      "state": "South Dakota",
+      "zip": "79666-3227"
     },
     {
       "id": 2,
       "user_id": 2,
-      "city": "Wheaton",
-      "state": "North Carolina",
-      "zip": "14547-9630"
+      "city": "Port Hiltontown",
+      "state": "Oklahoma",
+      "zip": "00410-7353"
     },
     {
       "id": 3,
       "user_id": 3,
-      "city": "Bogisichport",
+      "city": "Pensacola",
       "state": "Rhode Island",
-      "zip": "84523"
+      "zip": "66841-5638"
     },
     {
       "id": 4,
       "user_id": 4,
-      "city": "Marcelofurt",
-      "state": "Tennessee",
-      "zip": "76608-8652"
+      "city": "Creminhaven",
+      "state": "Alaska",
+      "zip": "67396"
     },
     {
       "id": 5,
       "user_id": 5,
-      "city": "North Lorena",
-      "state": "Alaska",
-      "zip": "35637"
+      "city": "Fort Ruthe",
+      "state": "Connecticut",
+      "zip": "05472-6977"
     },
     {
       "id": 6,
       "user_id": 6,
-      "city": "Anselfort",
-      "state": "New York",
-      "zip": "96711"
+      "city": "West Seneca",
+      "state": "Pennsylvania",
+      "zip": "98432"
     },
     {
       "id": 7,
       "user_id": 7,
-      "city": "West Arden",
-      "state": "Oregon",
-      "zip": "39526"
+      "city": "Weissnatmouth",
+      "state": "Michigan",
+      "zip": "69382"
     },
     {
       "id": 8,
       "user_id": 8,
-      "city": "Victoria",
-      "state": "West Virginia",
-      "zip": "86842-2831"
+      "city": "Oramouth",
+      "state": "Vermont",
+      "zip": "17075"
     }
   ],
   "categories": [
     {
       "id": 1,
-      "name": "Tools"
+      "name": "Shoes"
     },
     {
       "id": 2,
-      "name": "Outdoors"
-    },
-    {
-      "id": 3,
-      "name": "Games"
-    },
-    {
-      "id": 4,
-      "name": "Sports"
-    },
-    {
-      "id": 5,
-      "name": "Music"
-    },
-    {
-      "id": 6,
       "name": "Grocery"
     },
     {
+      "id": 3,
+      "name": "Home"
+    },
+    {
+      "id": 4,
+      "name": "Beauty"
+    },
+    {
+      "id": 5,
+      "name": "Books"
+    },
+    {
+      "id": 6,
+      "name": "Shoes"
+    },
+    {
       "id": 7,
-      "name": "Sports"
+      "name": "Electronics"
     },
     {
       "id": 8,
-      "name": "Outdoors"
+      "name": "Grocery"
     }
   ],
   "products": [
     {
       "id": 1,
-      "category_id": 7,
-      "name": "Oriental Concrete Shirt",
-      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "price": "835.00",
-      "stock_quantity": 96,
-      "image_url": "https://loremflickr.com/640/480?lock=2695804426911744"
+      "category_id": 6,
+      "name": "Elegant Steel Shoes",
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "price": "973.00",
+      "stock_quantity": 45,
+      "image_url": "https://loremflickr.com/640/480?lock=3520463783329792"
     },
     {
       "id": 2,
-      "category_id": 6,
-      "name": "Practical Concrete Pizza",
+      "category_id": 1,
+      "name": "Recycled Concrete Gloves",
       "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "price": "868.00",
-      "stock_quantity": 25,
-      "image_url": "https://picsum.photos/seed/XlwiH/640/480"
+      "price": "676.00",
+      "stock_quantity": 58,
+      "image_url": "https://loremflickr.com/640/480?lock=1456455777517568"
     },
     {
       "id": 3,
-      "category_id": 6,
-      "name": "Recycled Plastic Hat",
-      "description": "The Football Is Good For Training And Recreational Purposes",
-      "price": "218.00",
-      "stock_quantity": 80,
-      "image_url": "https://loremflickr.com/640/480?lock=4121030358466560"
+      "category_id": 4,
+      "name": "Elegant Fresh Soap",
+      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "price": "946.00",
+      "stock_quantity": 15,
+      "image_url": "https://loremflickr.com/640/480?lock=6609107112951808"
     },
     {
       "id": 4,
-      "category_id": 5,
-      "name": "Bespoke Bronze Sausages",
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "price": "4.00",
-      "stock_quantity": 13,
-      "image_url": "https://picsum.photos/seed/tmMDM7i8/640/480"
+      "category_id": 3,
+      "name": "Fantastic Frozen Chicken",
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "854.00",
+      "stock_quantity": 29,
+      "image_url": "https://picsum.photos/seed/zy2xRM/640/480"
     },
     {
       "id": 5,
-      "category_id": 2,
-      "name": "Modern Granite Keyboard",
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "534.00",
-      "stock_quantity": 31,
-      "image_url": "https://picsum.photos/seed/JybGzx/640/480"
+      "category_id": 8,
+      "name": "Handcrafted Granite Chicken",
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "price": "700.00",
+      "stock_quantity": 1,
+      "image_url": "https://loremflickr.com/640/480?lock=8804304206954496"
     },
     {
       "id": 6,
-      "category_id": 3,
-      "name": "Bespoke Metal Shoes",
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "price": "987.00",
-      "stock_quantity": 8,
-      "image_url": "https://picsum.photos/seed/AgfCsx/640/480"
+      "category_id": 5,
+      "name": "Modern Rubber Shirt",
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "price": "155.00",
+      "stock_quantity": 27,
+      "image_url": "https://picsum.photos/seed/asxwIM9tfH/640/480"
     },
     {
       "id": 7,
-      "category_id": 2,
-      "name": "Sleek Frozen Chicken",
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "price": "593.00",
-      "stock_quantity": 45,
-      "image_url": "https://loremflickr.com/640/480?lock=614122072834048"
+      "category_id": 1,
+      "name": "Fantastic Fresh Table",
+      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "price": "240.00",
+      "stock_quantity": 50,
+      "image_url": "https://loremflickr.com/640/480?lock=2167270979665920"
     },
     {
       "id": 8,
-      "category_id": 7,
-      "name": "Bespoke Rubber Fish",
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "price": "1.00",
-      "stock_quantity": 51,
-      "image_url": "https://picsum.photos/seed/5ukYj/640/480"
+      "category_id": 2,
+      "name": "Elegant Concrete Soap",
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "price": "702.00",
+      "stock_quantity": 15,
+      "image_url": "https://loremflickr.com/640/480?lock=6684762865401856"
     }
   ],
   "reviews": [
     {
       "id": 1,
-      "product_id": 1,
-      "user_id": 5,
-      "rating": 3,
-      "comment": "Talus solio conservo veniam antepono ventus vaco paens teneo.",
-      "date_created": "2023-01-18T16:57:29.292Z"
+      "product_id": 7,
+      "user_id": 3,
+      "rating": 1,
+      "comment": "Cursus defero aequitas sulum validus bibo.",
+      "date_created": "2023-08-01T04:04:03.555Z"
     },
     {
       "id": 2,
-      "product_id": 8,
-      "user_id": 8,
-      "rating": 4,
-      "comment": "Nostrum aurum suus.",
-      "date_created": "2023-06-22T17:23:17.223Z"
+      "product_id": 6,
+      "user_id": 2,
+      "rating": 5,
+      "comment": "Compello perferendis summa denego pel cultura angulus tersus pectus.",
+      "date_created": "2023-04-30T01:37:32.894Z"
     },
     {
       "id": 3,
-      "product_id": 7,
-      "user_id": 8,
-      "rating": 2,
-      "comment": "Solitudo colo utor desidero demens.",
-      "date_created": "2023-08-03T20:19:05.809Z"
+      "product_id": 6,
+      "user_id": 2,
+      "rating": 4,
+      "comment": "Solus ciminatio cur alius.",
+      "date_created": "2023-12-31T17:28:09.250Z"
     },
     {
       "id": 4,
-      "product_id": 6,
-      "user_id": 7,
+      "product_id": 2,
+      "user_id": 3,
       "rating": 1,
-      "comment": "Ex cunabula conculco demo.",
-      "date_created": "2023-11-04T03:26:04.575Z"
+      "comment": "Sono auxilium astrum cogo conitor culpo pax conduco.",
+      "date_created": "2023-05-22T02:25:30.957Z"
     },
     {
       "id": 5,
-      "product_id": 3,
-      "user_id": 5,
-      "rating": 2,
-      "comment": "Amitto amplus curia spes ago saepe cresco reprehenderit.",
-      "date_created": "2023-04-05T23:16:41.873Z"
+      "product_id": 5,
+      "user_id": 1,
+      "rating": 3,
+      "comment": "Ubi suffragium arx terreo.",
+      "date_created": "2023-08-14T15:55:52.392Z"
     },
     {
       "id": 6,
-      "product_id": 2,
-      "user_id": 5,
-      "rating": 3,
-      "comment": "Laboriosam rem compello conforto villa.",
-      "date_created": "2023-02-13T12:12:09.883Z"
+      "product_id": 4,
+      "user_id": 4,
+      "rating": 2,
+      "comment": "Degenero aegrotatio demo deprimo trans.",
+      "date_created": "2023-03-27T11:30:18.959Z"
     },
     {
       "id": 7,
-      "product_id": 3,
-      "user_id": 4,
+      "product_id": 5,
+      "user_id": 3,
       "rating": 3,
-      "comment": "Unde crudelis cresco decerno.",
-      "date_created": "2023-12-11T10:10:18.834Z"
+      "comment": "Cupiditas condico ascisco velit acer depono.",
+      "date_created": "2023-06-06T11:49:16.992Z"
     },
     {
       "id": 8,
-      "product_id": 6,
-      "user_id": 1,
-      "rating": 5,
-      "comment": "Sopor aureus torqueo.",
-      "date_created": "2023-07-18T11:40:33.308Z"
+      "product_id": 5,
+      "user_id": 5,
+      "rating": 2,
+      "comment": "Adsuesco depraedor tantillus.",
+      "date_created": "2023-11-08T09:44:50.251Z"
     }
   ],
   "carts": [
@@ -351,290 +351,257 @@
     {
       "id": 1,
       "cart_id": 1,
-      "product_id": 7,
-      "quantity": 2
-    },
-    {
-      "id": 2,
-      "cart_id": 2,
       "product_id": 4,
       "quantity": 3
     },
     {
+      "id": 2,
+      "cart_id": 1,
+      "product_id": 4,
+      "quantity": 5
+    },
+    {
       "id": 3,
-      "cart_id": 2,
-      "product_id": 1,
+      "cart_id": 1,
+      "product_id": 8,
       "quantity": 3
     },
     {
       "id": 4,
       "cart_id": 2,
-      "product_id": 5,
-      "quantity": 1
+      "product_id": 7,
+      "quantity": 2
     },
     {
       "id": 5,
-      "cart_id": 3,
+      "cart_id": 2,
       "product_id": 7,
-      "quantity": 1
+      "quantity": 5
     },
     {
       "id": 6,
       "cart_id": 3,
-      "product_id": 2,
+      "product_id": 7,
       "quantity": 1
     },
     {
       "id": 7,
       "cart_id": 4,
-      "product_id": 6,
-      "quantity": 3
+      "product_id": 8,
+      "quantity": 1
     },
     {
       "id": 8,
       "cart_id": 5,
-      "product_id": 3,
-      "quantity": 2
+      "product_id": 2,
+      "quantity": 4
     },
     {
       "id": 9,
       "cart_id": 5,
-      "product_id": 4,
-      "quantity": 4
+      "product_id": 1,
+      "quantity": 1
     },
     {
       "id": 10,
-      "cart_id": 5,
-      "product_id": 7,
-      "quantity": 5
+      "cart_id": 6,
+      "product_id": 8,
+      "quantity": 2
     },
     {
       "id": 11,
       "cart_id": 6,
-      "product_id": 5,
-      "quantity": 2
+      "product_id": 2,
+      "quantity": 3
     },
     {
       "id": 12,
       "cart_id": 7,
+      "product_id": 1,
+      "quantity": 1
+    },
+    {
+      "id": 13,
+      "cart_id": 8,
       "product_id": 8,
       "quantity": 3
     },
     {
-      "id": 13,
-      "cart_id": 7,
-      "product_id": 1,
-      "quantity": 2
-    },
-    {
       "id": 14,
-      "cart_id": 7,
-      "product_id": 2,
-      "quantity": 2
+      "cart_id": 8,
+      "product_id": 3,
+      "quantity": 3
     },
     {
       "id": 15,
       "cart_id": 8,
       "product_id": 4,
-      "quantity": 3
-    },
-    {
-      "id": 16,
-      "cart_id": 8,
-      "product_id": 6,
-      "quantity": 1
-    },
-    {
-      "id": 17,
-      "cart_id": 8,
-      "product_id": 1,
-      "quantity": 3
+      "quantity": 4
     }
   ],
   "orders": [
     {
       "id": 1,
       "user_id": 5,
-      "address_id": 2,
-      "date_created": "2023-02-20T05:02:10.607Z",
-      "status": "Delivered"
+      "address_id": 5,
+      "date_created": "2023-12-19T15:02:51.875Z",
+      "status": "Shipped"
     },
     {
       "id": 2,
-      "user_id": 3,
-      "address_id": 4,
-      "date_created": "2023-03-31T22:12:06.222Z",
-      "status": "Shipped"
-    },
-    {
-      "id": 3,
-      "user_id": 1,
-      "address_id": 7,
-      "date_created": "2023-10-28T15:34:59.313Z",
-      "status": "Shipped"
-    },
-    {
-      "id": 4,
-      "user_id": 2,
-      "address_id": 1,
-      "date_created": "2023-10-05T21:07:38.195Z",
-      "status": "Shipped"
-    },
-    {
-      "id": 5,
-      "user_id": 7,
-      "address_id": 5,
-      "date_created": "2023-04-17T03:59:05.000Z",
+      "user_id": 4,
+      "address_id": 2,
+      "date_created": "2024-01-06T01:59:31.225Z",
       "status": "Delivered"
     },
     {
-      "id": 6,
+      "id": 3,
+      "user_id": 3,
+      "address_id": 2,
+      "date_created": "2023-08-30T22:31:50.980Z",
+      "status": "Processing"
+    },
+    {
+      "id": 4,
       "user_id": 7,
-      "address_id": 3,
-      "date_created": "2023-01-25T12:59:58.250Z",
+      "address_id": 6,
+      "date_created": "2023-12-02T17:21:53.728Z",
+      "status": "Processing"
+    },
+    {
+      "id": 5,
+      "user_id": 5,
+      "address_id": 7,
+      "date_created": "2023-08-09T16:05:54.226Z",
+      "status": "Processing"
+    },
+    {
+      "id": 6,
+      "user_id": 8,
+      "address_id": 7,
+      "date_created": "2024-01-05T18:55:19.447Z",
       "status": "Shipped"
     },
     {
       "id": 7,
-      "user_id": 6,
-      "address_id": 2,
-      "date_created": "2023-03-19T04:57:19.904Z",
-      "status": "Processing"
+      "user_id": 5,
+      "address_id": 3,
+      "date_created": "2023-06-02T20:57:14.966Z",
+      "status": "Shipped"
     },
     {
       "id": 8,
-      "user_id": 2,
-      "address_id": 5,
-      "date_created": "2023-07-02T03:42:30.169Z",
-      "status": "Shipped"
+      "user_id": 8,
+      "address_id": 1,
+      "date_created": "2023-06-15T16:14:44.104Z",
+      "status": "Processing"
     }
   ],
   "orderItems": [
     {
       "id": 1,
       "order_id": 1,
-      "product_id": 7,
-      "quantity": 3,
-      "price_each": "593.00"
+      "product_id": 1,
+      "quantity": 4,
+      "price_each": "973.00"
     },
     {
       "id": 2,
       "order_id": 1,
-      "product_id": 4,
-      "quantity": 3,
-      "price_each": "4.00"
+      "product_id": 3,
+      "quantity": 2,
+      "price_each": "946.00"
     },
     {
       "id": 3,
-      "order_id": 2,
-      "product_id": 5,
-      "quantity": 5,
-      "price_each": "534.00"
+      "order_id": 1,
+      "product_id": 7,
+      "quantity": 3,
+      "price_each": "240.00"
     },
     {
       "id": 4,
       "order_id": 2,
-      "product_id": 6,
-      "quantity": 2,
-      "price_each": "987.00"
+      "product_id": 1,
+      "quantity": 4,
+      "price_each": "973.00"
     },
     {
       "id": 5,
       "order_id": 2,
-      "product_id": 7,
+      "product_id": 3,
       "quantity": 2,
-      "price_each": "593.00"
+      "price_each": "946.00"
     },
     {
       "id": 6,
       "order_id": 3,
-      "product_id": 3,
+      "product_id": 8,
       "quantity": 2,
-      "price_each": "218.00"
+      "price_each": "702.00"
     },
     {
       "id": 7,
       "order_id": 3,
-      "product_id": 8,
-      "quantity": 2,
-      "price_each": "1.00"
+      "product_id": 1,
+      "quantity": 3,
+      "price_each": "973.00"
     },
     {
       "id": 8,
-      "order_id": 3,
-      "product_id": 6,
+      "order_id": 4,
+      "product_id": 4,
       "quantity": 3,
-      "price_each": "987.00"
+      "price_each": "854.00"
     },
     {
       "id": 9,
       "order_id": 4,
       "product_id": 7,
       "quantity": 3,
-      "price_each": "593.00"
+      "price_each": "240.00"
     },
     {
       "id": 10,
       "order_id": 4,
-      "product_id": 1,
-      "quantity": 4,
-      "price_each": "835.00"
+      "product_id": 6,
+      "quantity": 3,
+      "price_each": "155.00"
     },
     {
       "id": 11,
       "order_id": 5,
-      "product_id": 6,
-      "quantity": 3,
-      "price_each": "987.00"
+      "product_id": 1,
+      "quantity": 4,
+      "price_each": "973.00"
     },
     {
       "id": 12,
-      "order_id": 5,
-      "product_id": 8,
-      "quantity": 3,
-      "price_each": "1.00"
+      "order_id": 6,
+      "product_id": 5,
+      "quantity": 1,
+      "price_each": "700.00"
     },
     {
       "id": 13,
-      "order_id": 6,
-      "product_id": 2,
-      "quantity": 1,
-      "price_each": "868.00"
+      "order_id": 7,
+      "product_id": 1,
+      "quantity": 5,
+      "price_each": "973.00"
     },
     {
       "id": 14,
-      "order_id": 6,
-      "product_id": 7,
-      "quantity": 3,
-      "price_each": "593.00"
+      "order_id": 8,
+      "product_id": 8,
+      "quantity": 5,
+      "price_each": "702.00"
     },
     {
       "id": 15,
-      "order_id": 7,
-      "product_id": 2,
-      "quantity": 5,
-      "price_each": "868.00"
-    },
-    {
-      "id": 16,
-      "order_id": 7,
-      "product_id": 4,
-      "quantity": 3,
-      "price_each": "4.00"
-    },
-    {
-      "id": 17,
       "order_id": 8,
-      "product_id": 2,
+      "product_id": 5,
       "quantity": 5,
-      "price_each": "868.00"
-    },
-    {
-      "id": 18,
-      "order_id": 8,
-      "product_id": 6,
-      "quantity": 4,
-      "price_each": "987.00"
+      "price_each": "700.00"
     }
   ]
 }
