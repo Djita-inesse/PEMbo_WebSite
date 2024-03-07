@@ -73,6 +73,12 @@ const ProductsTable = () => {
   const navigateToCreate = () => {
     window.location.href = '/product/create';
   }
+
+  const navigateToEdit = (productId: number) => {
+    window.location.href = `/product/edit/${productId}`
+  }
+
+
   return (
     <Box sx={{ overflow: 'auto', p: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
@@ -164,7 +170,7 @@ const ProductsTable = () => {
                 <TableCell align="right">{`$${product.price}`}</TableCell>
                 <TableCell align="right">{getCategoryName(product.category_id)}</TableCell>
                 <TableCell align="right">
-                  <IconButton color="primary">
+                  <IconButton color="primary" onClick={() => navigateToEdit(product.id)}>
                     <EditIcon />
                   </IconButton>
                   <IconButton color="secondary">
