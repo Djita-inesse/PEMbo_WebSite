@@ -17,27 +17,13 @@ import CustomerEdit from "../pages/dashboard/Customers/Edit";
 import DashboardCustomizeOutlinedIcon from '@mui/icons-material/DashboardCustomizeOutlined';
 import CustomerDetail from "../pages/dashboard/Customers/Detail";
 import AccountPage from "../pages/Account/AccountPage"
+import ProductEdit from "../pages/dashboard/products/edit";
 
 
 const appRoutes: RouteType[] = [
-  // {
-  //   index: true,
-  //   element: <HomePage />,
-  //   state: "home"
-  // },
-  // {
-
-  //   path: "/home",
-  //   element: <HomePage />,
-  //   state: "home",
-  //   sidebarProps: {
-  //     displayText: "Dashboard",
-  //     icon: <DashboardCustomizeOutlinedIcon />
-  //   }
-  // },
   {
     path: "/Account",
-    element: <AccountPage/>,
+    element: <AccountPage />,
     state: "Account",
     sidebarProps: {
       displayText: "Account",
@@ -99,9 +85,17 @@ const appRoutes: RouteType[] = [
       {
         path: "/product/create",
         element: <ProductCreate />,
-        state: "product.creat",
+        state: "product.create",
         sidebarProps: {
           displayText: "Create"
+        }
+      },
+      {
+        path: "/product/edit/:productId",
+        element: <ProductEdit />,
+        state: "product.edit",
+        sidebarProps: {
+          displayText: "Edit"
         }
       }
     ]

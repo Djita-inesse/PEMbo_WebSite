@@ -1,121 +1,179 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Button, TextField, Typography, FormControlLabel, Checkbox, Select, MenuItem, InputLabel, FormControl, Grid } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import mockData from '../../../assets/mockData.json';
+import { useDropzone } from 'react-dropzone';
+import { Product } from '../../../types/dataTypes';
 
-const { products, categories, } = mockData;
+type ImageFile = File & {
+    preview: string;
+};
 
-// Assuming you have a function to fetch a product by ID for editing
-// and functions to update or create a product
-//  getProductById, updateProduct, createProduct }
-const getProductById = async (id:number) => {
-    return products.find((product) => product.id === id);
-}
-const updateProduct = async (id:number, product) => {
-    // Update the product
-    products[products.findIndex((p) => p.id === id)] = product;
-}
+const Input = styled(TextField)(({ theme }) => ({
+    margin: theme.spacing(1),
+}));
 
+const StyledDropZone = styled('div')(({ theme }) => ({
+    border: `2px dashed ${theme.palette.primary.main}`,
+    borderRadius: theme.shape.borderRadius,
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    cursor: 'pointer',
+    marginBottom: theme.spacing(2),
+}));
 
-const ProductForm = ({ existingProduct }) => {
+const ProductForm = ({ existingProduct }: { existingProduct?: Product }) => {
     const navigate = useNavigate();
     const { productId } = useParams();
-    const isEditMode = !!existingProduct || !!productId;
+    const isEditMode = Boolean(existingProduct || productId);
 
-    // Initial state setup
     const initialState = {
+        id: existingProduct?.id || 0,
         name: '',
         description: '',
-        oldPrice: '',
-        newPrice: '',
-        category: '',
-        keepSelling: false,
+        price: '',
+        category_id: 0,
+        stock_quantity: 0,
         images: [],
+        image_url: '',
     };
 
-    const [product, setProduct] = useState(initialState);
-    const [categories] = useState([{ id: 10, name: 'Ten' }, { id: 20, name: 'Twenty' }]); // Example categories
+    const [product, setProduct] = useState<Product>(initialState);
+    const [images, setImages] = useState<ImageFile[]>([]);
+    const [categories, setCategories] = useState([{ id: '10', name: 'Ten' }, { id: '20', name: 'Twenty' }]);
 
     useEffect(() => {
-        const fetchProduct = async () => {
-            if (!isEditMode) return;
-            // Fetch the product to edit
-            const productData = existingProduct ? existingProduct : await getProductById(productId);
-            setProduct(productData);
-        };
-        fetchProduct();
-    }, [isEditMode, existingProduct, productId]);
+        if (isEditMode && existingProduct) {
+            setProduct(existingProduct);
+            // convert images to the ImageFile type here
+        }
+    }, [isEditMode, existingProduct]);
 
-    const handleChange = (e) => {
-        const { name, value, checked, type } = e.target;
-        setProduct((prev) => ({
+    const onDrop = useCallback((acceptedFiles: File[]) => {
+        setImages(acceptedFiles.map(file => Object.assign(file, {
+            preview: URL.createObjectURL(file)
+        })));
+    }, []);
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+
+    useEffect(() => {
+        // Clean up the previews
+        return () => images.forEach(file => URL.revokeObjectURL(file.preview));
+    }, [images]);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (isEditMode) {
+            console.log('Update product', product);
+        } else {
+            console.log('Create product', product);
+        }
+        navigate('/products');
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setProduct(prev => ({
             ...prev,
-            [name]: type === 'checkbox' ? checked : value,
+            [name]: value,
         }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (isEditMode) {
-            await updateProduct(productId, product);
-        } else {
-            await createProduct(product);
-        }
-        navigate('/products'); // Navigate back to products list after submit
-    };
-
-    // UI rendering with conditional logic for Create/Edit modes
     return (
-        <Box component="form" noValidate autoComplete="off" onSubmit={handleSubmit}>
+        <Box sx={{ padding: 3 }}>
             <Typography variant="h5" gutterBottom>
-                {isEditMode ? 'Edit Product' : 'Create New Product'}
+                {isEditMode ? 'Edit Product' : 'Create a New Product'}
             </Typography>
 
-            <TextField
-                fullWidth
-                label="Product Name"
-                variant="outlined"
-                name="name"
-                value={product.name}
-                onChange={handleChange}
-                margin="normal"
-            />
-
-            {/* Additional fields (description, pricing, etc.) follow the same pattern */}
-            {/* ReactQuill for description, TextFields for pricing, and so on */}
-
-            <FormControl fullWidth margin="normal">
-                <InputLabel>Category</InputLabel>
-                <Select
-                    name="category"
-                    value={product.category}
-                    label="Category"
+            <Box component="form" noValidate autoComplete="off" onSubmit={handleSubmit}>
+                <Typography variant="h6" gutterBottom>
+                    Basic details
+                </Typography>
+                <Input
+                    fullWidth
+                    name="name"
+                    label="Product Name"
+                    variant="outlined"
+                    value={product.name}
                     onChange={handleChange}
-                >
-                    {categories.map((cat) => (
-                        <MenuItem key={cat.id} value={cat.name}>
-                            {cat.name}
-                        </MenuItem>
-                    ))}
-                </Select>
-            </FormControl>
+                />
+                <ReactQuill theme="snow" value={product.description} onChange={value => setProduct(prev => ({ ...prev, description: value }))} />
 
-            <FormControlLabel
-                control={
-                    <Checkbox
-                        checked={product.keepSelling}
-                        onChange={handleChange}
-                        name="keepSelling"
-                    />
-                }
-                label="Keep selling when out of stock"
-            />
+                <Typography variant="h6" gutterBottom>
+                    Images
+                </Typography>
+                <StyledDropZone {...getRootProps()}>
+                    <input {...getInputProps()} />
+                    {isDragActive ? <p>Drop the images here...</p> : <p>Drag 'n' drop some images here, or click to select images</p>}
+                    <Box>
+                        {images.map((file, index) => (
+                            <Box key={index} sx={{ margin: 1 }}>
+                                <img src={file.preview} alt={`preview-${index}`} style={{ width: '100px', height: '100px' }} />
+                            </Box>
+                        ))}
+                    </Box>
+                </StyledDropZone>
 
-            <Button type="submit" variant="contained" color="primary" sx={{ mt: 2 }}>
-                {isEditMode ? 'Save Changes' : 'Create Product'}
-            </Button>
+                <Typography variant="h6" gutterBottom>
+                    Pricing and Stock
+                </Typography>
+                <Grid container spacing={2}>
+                    <Grid item xs={6}>
+                        <Input
+                            fullWidth
+                            type="number"
+                            name="price"
+                            label="Price"
+                            variant="outlined"
+                            value={product.price}
+                            onChange={handleChange}
+                        />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Input
+                            fullWidth
+                            type="number"
+                            name="stock_quantity"
+                            label="Stock Quantity"
+                            variant="outlined"
+                            value={product.stock_quantity}
+                            onChange={handleChange}
+                        />
+                    </Grid>
+                </Grid>
+
+                <Typography variant="h6" gutterBottom>
+                    Category
+                </Typography>
+                <FormControl fullWidth>
+                    <InputLabel id="category-select-label">Category</InputLabel>
+                    <Select
+                        labelId="category-select-label"
+                        id="category-select"
+                        name="category_id"
+                        value={product.category_id}
+                        label="Category"
+                        onChange={(e) => setProduct(prev => ({ ...prev, category_id: Number(e.target.value) }))}
+                    >
+                        {categories.map((cat) => (
+                            <MenuItem key={cat.id} value={cat.id}>
+                                {cat.name}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+
+                <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2, mt: 2 }}>
+                    <Button variant="outlined" onClick={() => navigate('/product/list')}>
+                        Cancel
+                    </Button>
+                    <Button type="submit" variant="contained" color="primary">
+                        {isEditMode ? 'Update' : 'Create'}
+                    </Button>
+                </Box>
+            </Box>
         </Box>
     );
 };
